@@ -1,0 +1,180 @@
+/* Main Stylesheet - Global English Institute */
+
+:root {
+  --primary-color: #1a2a6c;
+  --secondary-color: #fdbb2d;
+  --accent-color: #b21f1f;
+  --text-dark: #2d3436;
+  --text-light: #f5f6fa;
+  --bg-light: #ffffff;
+  --bg-gray: #f8f9fa;
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+/* Navbar Customization */
+.navbar {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid var(--secondary-color);
+  transition: var(--transition);
+}
+
+.navbar-brand {
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--primary-color) !important;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: var(--text-dark) !important;
+  margin: 0 10px;
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--secondary-color);
+  transition: var(--transition);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero {
+  padding: 160px 0 100px;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    #203a43 50%,
+    #2c5364 100%
+  );
+  color: var(--text-light);
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+}
+
+.hero h1 {
+  color: var(--text-light);
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+/* Cards & Sections */
+.section-padding {
+  padding: 80px 0;
+}
+
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.icon-box {
+  width: 60px;
+  height: 60px;
+  background: var(--bg-gray);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: #0d1a4a;
+  border-color: #0d1a4a;
+}
+
+.btn-outline-gold {
+  border: 2px solid var(--secondary-color);
+  color: var(--secondary-color);
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+.btn-outline-gold:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+  background: var(--primary-color);
+  color: var(--text-light);
+  padding: 50px 0 20px;
+}
+
+.footer-link {
+  color: var(--text-light);
+  text-decoration: none;
+  opacity: 0.7;
+  transition: var(--transition);
+}
+
+.footer-link:hover {
+  opacity: 1;
+  color: var(--secondary-color);
+}
+
+/* Animations (Generic for JS to trigger) */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.8s all ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
